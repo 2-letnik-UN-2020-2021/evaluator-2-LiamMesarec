@@ -1,0 +1,7 @@
+n := 6;
+digits := 3;
+for (i := 1 to digits) begin
+    digit := n - (n / 2) * 2;
+    CONSOLE digit;
+    n := n / 2
+end

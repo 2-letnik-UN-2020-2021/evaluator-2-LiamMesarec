@@ -1,0 +1,9 @@
+n := 12345;
+digits := 5;
+sum := 0;
+for (i := 1 to digits) begin
+    digit := n - (n / 10) * 10;
+    sum := sum + digit;
+    n := n / 10
+end;
+CONSOLE sum

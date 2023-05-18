@@ -1,0 +1,8 @@
+result := 0;
+for (i := 1 to 5) begin
+    result := result + i
+end;
+for (i := 1 to 3) begin
+    result := result * i
+end;
+CONSOLE result

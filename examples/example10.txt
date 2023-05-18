@@ -1,0 +1,8 @@
+grade1 := 6;
+grade2 := 7;
+grade3 := 8;
+grade4 := 9;
+grade5 := 10;
+sum := grade1 + grade2 + grade3 + grade4 + grade5;
+average := sum / 5;
+CONSOLE average

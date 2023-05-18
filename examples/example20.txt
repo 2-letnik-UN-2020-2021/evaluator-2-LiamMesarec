@@ -1,0 +1,15 @@
+counter := 0;
+for (i := 1 to 5) begin
+    counter := counter + 1
+end;
+for (i := 1 to 3) begin
+    counter := counter - 1
+end;
+for (i := 1 to 2) begin
+    counter := counter + 1
+end;
+for (i := 1 to 4) begin
+    counter := counter - 1
+end;
+CONSOLE counter
+

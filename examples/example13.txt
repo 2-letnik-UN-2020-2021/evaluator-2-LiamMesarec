@@ -1,0 +1,6 @@
+n := 5;
+result := 1;
+for (i := 1 to n) begin
+    result := result * i
+end;
+CONSOLE result
