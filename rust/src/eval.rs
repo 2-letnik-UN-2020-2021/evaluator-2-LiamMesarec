@@ -145,7 +145,8 @@ impl ParserInfo<'_> {
                 }
             }
         } else if self.match_token(Token::Console) {
-            self.evaluate_bitwise()
+            println!("{}", self.evaluate_bitwise()?);
+            return Ok(0);
         } else if self.match_token(Token::LeftParantheses) {
             let value = self.evaluate_bitwise()?;
             if !self.match_token(Token::RightParantheses) {

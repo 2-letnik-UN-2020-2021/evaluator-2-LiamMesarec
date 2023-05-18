@@ -1,1 +1,1 @@
-fakulteta:=1
+CONSOLE 1
