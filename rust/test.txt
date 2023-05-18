@@ -1,0 +1,6 @@
+ok := 1;
+ok := 1;
+
+for (i := 0 to stevilo - 1) begin
+     fakulteta:= fakulteta * (i + 1)
+end
