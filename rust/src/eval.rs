@@ -137,7 +137,6 @@ impl ParserInfo<'_> {
             if self.match_token(Token::Assignment) {
                 let value = self.evaluate_bitwise()?;
                 self.variables.insert(var.lexeme, value);
-                println!("{:?}", self.variables);
                 Ok(value)
             } else {
                 match self.variables.get(&var.lexeme) {
