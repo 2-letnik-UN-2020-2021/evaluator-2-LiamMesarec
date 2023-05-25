@@ -178,17 +178,20 @@ impl ParserInfo<'_> {
             let i = self.i;
             let mut control_var = *self.variables.get(&var).unwrap();
             while control_var <= end_value {
-                self.evaluate_bitwise()?;
-
-                if self.match_token(Token::End) {
-                    if control_var + 1 > end_value {
+                while !self.match_token(Token::End) {
+                    self.evaluate_bitwise()?;
+                    if self.match_token(Token::End) {
                         break;
+                    } else {
+                        self.end_of_statement()?;
                     }
-
-                    self.i = i;
-                } else {
-                    self.end_of_statement()?;
                 }
+
+                if control_var + 1 > end_value {
+                    break;
+                }
+
+                self.i = i;
 
                 control_var += 1;
                 self.variables.insert(var.to_string(), control_var);

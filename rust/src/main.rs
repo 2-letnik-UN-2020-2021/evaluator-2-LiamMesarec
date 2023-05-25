@@ -19,7 +19,7 @@ fn main() {
                 Err(error) => println!("\n{} in file {}", error, arg),
                 _ => match eval::parse(&tokens, &mut variables) {
                     Err(error) => println!("\n{} in file {}", error, arg),
-                    Ok(result) => ()
+                    Ok(_) => ()
                 }
             }
         };

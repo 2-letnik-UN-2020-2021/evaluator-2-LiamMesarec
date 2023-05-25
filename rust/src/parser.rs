@@ -55,7 +55,7 @@ impl ParserInfo<'_> {
         false
     }
 
-    fn statement(&mut self, expected_tokens: &[Token]) -> Result<(), Error> {
+    /*fn statement(&mut self, expected_tokens: &[Token]) -> Result<(), Error> {
         for &expected_token in expected_tokens {
             if !self.match_token(expected_token) {
                 return Err(Error::Generic(self.current_token_info.clone(), self.last_n_token_lexemes(3)));
@@ -63,7 +63,7 @@ impl ParserInfo<'_> {
         }
 
         return Ok(());
-    }
+    }*/
 
     fn last_n_token_lexemes(&self, n: u32) -> String {
         let mut counter = 1;
