@@ -184,6 +184,7 @@ impl ParserInfo<'_> {
                     if control_var + 1 > end_value {
                         break;
                     }
+
                     self.i = i;
                 } else {
                     self.end_of_statement()?;
@@ -192,7 +193,6 @@ impl ParserInfo<'_> {
                 control_var += 1;
                 self.variables.insert(var.to_string(), control_var);
             }
-
         }
 
         Ok(0)
